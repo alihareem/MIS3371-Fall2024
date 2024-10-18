@@ -1,0 +1,26 @@
+HOMEWORK 1 - JAVASCRIPT
+
+ /*
+ Program name: patient-form.html
+Author: Hareem Ali
+Date created: 9/16
+Date last edited: 9/21
+Version: 3.0
+Description: this is the javascript code for a patient registration form
+*/
+
+
+
+/* Date code set from W3 Schools */
+const d = new Date();
+let text = d.toLocaleDateString();
+document.getElementById("today").innerHTML = text;
+
+/* code taken from MISSO resources for patient pain slider */
+let slider = document.getElementById("range")
+    let output = document.getElementById("range-scale")
+    output.innerHTML = slider.value;
+        slider.oninput = function() {output.innerHTML = this.value;};
+
+
+
