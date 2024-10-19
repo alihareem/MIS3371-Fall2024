@@ -481,6 +481,12 @@ Description: this is the html code for a patient registration form
                                 name="reset"
                                 id="reset"
                                 style="font-family:'optima'; sans-serif;">
+                                <input
+                                type="button" 
+                                name="review"
+                                id="review"
+                                value="reivew"
+                                style="font-family:'optima'; sans-serif;">
                             </center>
                         </td>
                     </tr>
