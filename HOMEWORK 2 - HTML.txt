@@ -309,9 +309,12 @@ Description: this is the html code for a patient registration form
                             name="email"
                             id="email"
                             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}&"
+                            onblur="validateEmail()"
                             required
                             placeholder="hareemali@gmail.com"
                             />
+                        </br>
+                        <span class="error" id="email-error"></span>
                         </td>
                     </tr>
 
@@ -323,10 +326,13 @@ Description: this is the html code for a patient registration form
                             name="phone"
                             id="phone"
                             maxlength="30"
+                            onblur="validatePhoneNumber()"
                             required
                             pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                             placeholder="555-666-7777"
                             />
+                        </br>
+                        <span class="error" id="phone-error"></span>
                         </td>
                     </tr>
 
@@ -410,8 +416,11 @@ Description: this is the html code for a patient registration form
                             name="username"
                             id="username"
                             maxlength="15"
+                            onblur="validateUsername()"
                             required
                             />
+                        </br>
+                        <span class="error" id="username-error"></span>
                         </td>
                     </tr>
 
@@ -424,8 +433,13 @@ Description: this is the html code for a patient registration form
                             id="password"
                             minlength="10"
                             maxlength="30"
+                            onblur="validatePassword()"
+                            oninput="validatePassword()"
+                            onfocus="validatePassword()"
                             required
                             />
+                        </br>
+                        <span class="error" id="password-error"></span>
                         </td>
                     </tr>
 
@@ -438,8 +452,14 @@ Description: this is the html code for a patient registration form
                             id="confirmpassword"
                             minlength="10"
                             maxlength="30"
+                            title="Must contain at least 10 characters with a combination of uppercase, lowercase, numbers, and special characters"
+                            onblur="confirmPassword()"
+                            oninput="confirmPassword()"
+                            onfocus="confirmPassword()"
                             required
                             />
+                        </br>
+                        <span class="error" id="password-error"></span>
                         </td>
                     </tr>
 
