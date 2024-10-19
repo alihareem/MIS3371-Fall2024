@@ -415,7 +415,9 @@ Description: this is the html code for a patient registration form
                             type="text"
                             name="username"
                             id="username"
+                            minlength="5"
                             maxlength="15"
+                            title="Must contain at least 5 characters and cannot start with numbers"
                             onblur="validateUsername()"
                             required
                             />
