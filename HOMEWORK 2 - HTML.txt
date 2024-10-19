@@ -461,7 +461,7 @@ Description: this is the html code for a patient registration form
                             required
                             />
                         </br>
-                        <span class="error" id="password-error"></span>
+                        <span class="error" id="password2-error"></span>
                         </td>
                     </tr>
 
@@ -481,6 +481,8 @@ Description: this is the html code for a patient registration form
                                 name="reset"
                                 id="reset"
                                 style="font-family:'optima'; sans-serif;">
+
+<!-- adding the new review button for hw2 -->
                                 <input
                                 type="button" 
                                 name="review"
@@ -492,6 +494,21 @@ Description: this is the html code for a patient registration form
                     </tr>
                 </table>
             </div>
+        <div class="password-message">
+            <span id="message1"></span> <br/>
+<span id="message1"></span> <br/>
+<span id="message2"></span> <br/>
+<span id="message3"></span> <br/>
+<span id="message4"></span> <br/>
+<span id="message5"></span> <br/>
+<span id="message6"></span> <br/>
+<span id="message7"></span> <br/>
+<span id="password2-error"></span> <br/>
+        </div>
+            <center>
+                <p id="showInput"></p>
+            </center>
+        </div>
         </center>
     </form>
 
