@@ -1,13 +1,13 @@
-HOMEWORK 1 - HTML
+HOMEWORK 2 - HTML
 
 <!doctype html>
 
 <!--
 Program name: patient-form.html
 Author: Hareem Ali
-Date created: 9/16
-Date last edited: 9/21
-Version: 5.0
+Date created: 10/15
+Date last edited: 10/19
+Version: 2.0
 Description: this is the html code for a patient registration form
 -->
 
@@ -46,7 +46,7 @@ Description: this is the html code for a patient registration form
 
     <!-- registration form starts -->
     
-    <form action="homework1-thankyou.html">
+    <form action="homework 2-thankyou.html">
         <center>
             <div class="format">
                 <table>
@@ -64,9 +64,13 @@ Description: this is the html code for a patient registration form
                             name="fname"
                             id="fname"
                             maxlength="30"
+<-- ADDING PATTERN FOR ELEMENT ATTRIBUTE --> pattern = "[a-zA-Z']{1,30}
+                            onblur = "validateFirstName()"
                             required
                             placeholder="Hareem"
                             />
+                        </br>
+                        <span class="error" id="fname-error"></span>
                         </td>
                     </tr>
 
@@ -78,8 +82,12 @@ Description: this is the html code for a patient registration form
                             name="middleinitial"
                             id="middleinitial"
                             maxlength="1"
+                            pattern = "[a-zA-Z']{0,1}
+                            onblur = "validateMiddleName()"
                             placeholder="M"
                             />
+                        </br>
+                        <span class="error" id="middlename-error"></span>
                         </td>
                     </tr>
 
@@ -91,9 +99,13 @@ Description: this is the html code for a patient registration form
                             name="lname"
                             id="lname"
                             maxlength="30"
+                            pattern = "[a-zA-Z']{1,30}
+                            onblur = "validateLastName()"
                             required
                             placeholder="Ali"
                             />
+                        </br>
+                        <span class="error" id="lname-error"></span>
                         </td>
                     </tr>
 
@@ -135,8 +147,11 @@ Description: this is the html code for a patient registration form
                             type="date"
                             id="dateofbirth"
                             name="dateofbirth"
+                            onblur="validateDateofBirth()"
                             required
                             />
+                        </br>
+                        <span class="error" id="dateofbirth-error"></span>
                         </td>
                     </tr>
 
@@ -149,6 +164,7 @@ Description: this is the html code for a patient registration form
                             maxlength="11"
                             id="ssn"
                             name="ssn"
+                            onblur="
                             required
                             placeholder="111-222-3333"
                             />
@@ -450,7 +466,7 @@ Description: this is the html code for a patient registration form
 
 <!-- HTML ends here -->
 
-<script src="homework1.js"></script>
+<script src="homework 2 - JAVASCRIPT"></script>
 
     </body>
 </html>
