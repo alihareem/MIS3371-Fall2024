@@ -120,8 +120,32 @@ function validatePhoneNumber() {
      return true;
 }
 
-function validate
+function validateUsername() {
+    username = document.getElementById("username").value;
 
+    //converting username to lowercase now 
+    username = username.toLowerCase();
 
+    //display username in lowercase  
+    document.getElementById("username").value = username;
+
+    if (username.length == 0) {
+           document.getElementById("username").innerHTML = "Username field cannot be left blank";
+           return false;
+  }
+
+let regex = /^[a-zA-Z0-9_]+$/;
+if !regex.test(username) {
+       document.getElementById("username-error).innerHTML = "Username can only contain letters, numbers, or underscores";
+//checks that username only contains allowed characters
+       return false;
+  } else if (username.length > 30) {
+            document.getElemenyById("username-error").innerHTML = "Username cannot have more than 30 characters";
+            return false;
+  } else {
+       document.getElementById("username-error").innerHTML = "";
+       return true;
+  }
+}
 
 
