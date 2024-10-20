@@ -105,6 +105,20 @@ function validateEmail() {
 
 }
 
-function validate
+function validatePhoneNumber() {
+     const phoneInput = document.getElementById("phone-error");
+     const phone = phoneInput.value.replace(/\D/g,"");  //removes all non-number characters
+
+     if (phone.length != 10) {
+            document.getElementById("phone-error").innerHTML = "Phone number field cannot be left blank";
+            return false;
+  }
+
+     const formattedPhone = phone.slice(0,3) + "-" + phone.slice(3,6) + "-" + phone.slice(6)
+     phoneInput.value = formattedPhone;
+     document.getElementById("phone-error).innerHTML = "";
+     return true;
+
+
 
 
