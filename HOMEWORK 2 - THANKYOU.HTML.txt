@@ -1,4 +1,4 @@
-HOMEWORK 1 - THANKYOU.HTML
+HOMEWORK 2 - THANKYOU.HTML
 
  <!doctype html>
 
@@ -55,7 +55,7 @@ Description: this is the html code for a thank you page
     <p id="footer"> &#169 2024 Happy Hearts Cardiology | <a href="insert.link.here" target="_blank"<rel="noopener noreferrer">Contact US</a></p>
 </footer>
 
-<script src="homework1.js"></script>
+<script src="HOMEWORK 2 - JAVASCRIPT"></script>
 
     </body>
 </html>
