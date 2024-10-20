@@ -3,9 +3,9 @@ HOMEWORK1 - CSS
 /*
 Program name: patient-form.html
 Author: Hareem Ali
-Date created: 9/16
-Date last edited: 9/21
-Version: 1.0
+Date created: 10/15
+Date last edited: 10/20
+Version: 2.0
 Description: this is the css code for a thank you page
 */
 
@@ -79,3 +79,28 @@ input{
     text-align: left;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+
+/* HW2 ADDITIONS */
+
+.error {
+        color: blue;
+        font-size: 12px;
+        font-family: "optima", sans-serif;
+        font-weight: normal;
+}
+
+.password-message { 
+        text-alight: right;
+        font-family: "optima", sans-serif;
+        font-weight: normal;
+        position: relative;
+        left: 100px;
+        background: transparent;
+        padding: 10px;
+        border-spacing: 2px;
+        border-radius: 20px;
+        color: blue;
+}
+
+
