@@ -197,5 +197,8 @@ function validate Password() {
 //confirm password validation js code
  function confirmPassword() {
        password1 = document.getElementById("password").value;
-       password2 = document.getElementById("password").value;
+       password2 = document.getElementById("confirmpassword").value;
+
+       if (password1 != password2) {
+             docuemnt.getElementById("pass
 
