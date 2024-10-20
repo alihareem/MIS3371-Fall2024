@@ -130,8 +130,14 @@ function validateUsername() {
     document.getElementById("username").value = username;
 
     if (username.length == 0) {
-           document.getElementById("username").innerHTML = "Username field cannot be left blank";
+           document.getElementById("username-error").innerHTML = "Username field cannot be left blank";
            return false;
+  }
+
+//check that username is not starting with a number
+     if (!isNaN(username.charAt(0))) {
+            document.getElementById("username-error").innerHTML = "Username cannot begin with a number";
+            return false;
   }
 
 let regex = /^[a-zA-Z0-9_]+$/;
@@ -139,6 +145,8 @@ if !regex.test(username) {
        document.getElementById("username-error).innerHTML = "Username can only contain letters, numbers, or underscores";
 //checks that username only contains allowed characters
        return false;
+  } else if (username.length < 5) {
+       document.getElementById("username-error").innerHTML = "Username must be at least 5 characters long";
   } else if (username.length > 30) {
             document.getElemenyById("username-error").innerHTML = "Username cannot have more than 30 characters";
             return false;
@@ -148,4 +156,5 @@ if !regex.test(username) {
   }
 }
 
+function validate
 
