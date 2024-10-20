@@ -1,7 +1,7 @@
 HOMEWORK 2 - JAVASCRIPT
 
  /*
- Program name: patient-form.html
+Program name: patient-form.html
 Author: Hareem Ali
 Date created: 10/14
 Date last edited: 10/19
