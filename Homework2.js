@@ -156,4 +156,43 @@ if !regex.test(username) {
   }
 }
 
-function validate
+function validate Password() {
+     const password = document.getElementById("password").value;
+     const username = document.getElementById("username").value;
+ 
+ //setting up and initializing array
+     const errorMessage = [];
+
+ //checking for lowercase letter
+     if (!password.match(/[a-z]/)) {
+             errorMessage.push("Enter at least one lowercase letter");
+     }
+
+  //checking for uppercase letter
+     if (!password.match(/[A-Z]/)) {
+             errorMessage.push("Enter at least one uppercase letter");
+     }
+
+ //checking for numbers
+     if (!password.match(/[0-9]/)) {
+             errorMessage.push("Enter at least one number");
+     }
+
+  //checking for special characters
+     if (!password.match(/[!\@#\$%&*\-_\\.+\(\)]/)) {
+             errorMessage.push("Enter at least one special character");
+     }
+
+  //checking for duplicate username 
+     if password == username || password.includes(username) {
+             errorMessage.push("Password cannot be the same as username");
+     }
+
+ //display error messages if there are any errors
+      const errorContainer = document.querySelector(".password-message");
+      errorContainer.innerHTML = errorMessage
+      .map((message) => `<span>{$message}</span><br/>`)
+      .join("");
+
+//confirm password validation js code
+ function confirmPassword
