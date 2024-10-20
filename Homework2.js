@@ -195,4 +195,7 @@ function validate Password() {
       .join("");
 
 //confirm password validation js code
- function confirmPassword
+ function confirmPassword() {
+       password1 = document.getElementById("password").value;
+       password2 = document.getElementById("password").value;
+
