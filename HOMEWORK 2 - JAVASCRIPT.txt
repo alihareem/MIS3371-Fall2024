@@ -30,7 +30,16 @@ function validateDateofBirth() {
     let maxDate = new Date().setFullYear(new Date()-120);
 
     if (date > new Date()) {
-       document.getElementById("dob-error
+       document.getElementById("dateofbirth-error)".innerHTML = "Date given is in the future"
+       dob.value="";
+       return false;
+} else if (date < new Date(maxDate)) {
+       document.getElementById("dateofbirth-error).innerHTML = "Date given in more than 120 years ago"
+       dob.value="";
+       return false;
+} else {
+       document.getElementById("dateofbirth-error).innerHTML = "";
+       return true
 
 
 
