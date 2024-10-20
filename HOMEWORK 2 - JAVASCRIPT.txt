@@ -72,7 +72,22 @@ function validateAddress1() {
          return true;
 }
 
+function validateZipcode() {
+    const zipInput = document.getElementById("zipcode);
+    let zip = zipInput.value.replace(/[^\d-]/g,"")  //removes non-number characters
+
+    if (!zip) {
+          document.getElementById("zipcode-error).innerHTML= "Zip code field cannot be left blank";
+          return false;
+  }
+    if (zip.length >5) {
+          zip = zip.slice(0,5);
+  }
+
+zipInput.value=zip;
+document.getElementById("zipcode-error").innerHTML ="";
+return true;
+}
+
 function validate
-
-
 
