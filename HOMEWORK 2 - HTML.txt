@@ -46,7 +46,7 @@ Description: this is the html code for a patient registration form
 
     <!-- registration form starts -->
     
-    <form action="homework 2-thankyou.html">
+    <form action="HOMEWORK 2-THANKYOU.html">
         <center>
             <div class="format">
                 <table>
@@ -522,7 +522,7 @@ Description: this is the html code for a patient registration form
 
 <!-- HTML ends here -->
 
-<script src="homework 2 - JAVASCRIPT"></script>
+<script src="HOMEWORK 2 - JAVASCRIPT"></script>
 
     </body>
 </html>
