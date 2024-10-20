@@ -193,6 +193,7 @@ function validate Password() {
       errorContainer.innerHTML = errorMessage
       .map((message) => `<span>{$message}</span><br/>`)
       .join("");
+}
 
 //confirm password validation js code
  function confirmPassword() {
@@ -200,5 +201,15 @@ function validate Password() {
        password2 = document.getElementById("confirmpassword").value;
 
        if (password1 != password2) {
-             docuemnt.getElementById("pass
+             docuemnt.getElementById("password2-error").innerHTML = "Passwords do not match";
+             return false;
+       } else {
+             document.getElementById("password2-error").innerHTML = "Password match";
+             return true
+       }
+ }
 
+//building the review button
+ function 
+
+ 
