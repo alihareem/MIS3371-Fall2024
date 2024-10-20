@@ -294,6 +294,7 @@ Description: this is the html code for a patient registration form
                             maxlength="30"
                             pattern="(0-9){5}"
                             title="Please enter 5-digit zip code"
+                            onblur="validateZipcode()"
                             required
                             placeholder="77889"
                             />
