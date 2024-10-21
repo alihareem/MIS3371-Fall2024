@@ -109,12 +109,12 @@ function validatePhoneNumber() {
      const phoneInput = document.getElementById("phone");
      const phone = phoneInput.value.replace(/\D/g,"");  //removes all non-number characters
 
-     if (phone.length != 10) {
+     if (phone.length == 0) {
             document.getElementById("phone-error").innerHTML = "Phone number field cannot be left blank";
             return false;
   }
 
-     const formattedPhone = phone.slice(0,3) + "-" + phone.slice(3,6) + "-" + phone.slice(6)
+     const formattedPhone = phone.slice(0,3) + "-" + phone.slice(3,6) + "-" + phone.slice(6,10)
      phoneInput.value = formattedPhone;
      document.getElementById("phone-error).innerHTML = "";
      return true;
@@ -191,7 +191,7 @@ function validate Password() {
  //display error messages if there are any errors
       const errorContainer = document.querySelector(".password-message");
       errorContainer.innerHTML = errorMessage
-      .map((message) => `<span>{$message}</span><br/>`)
+      .map((message) => `<span>${message}</span><br/>`)
       .join("");
 }
 
