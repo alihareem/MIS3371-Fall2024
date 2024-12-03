@@ -1,0 +1,181 @@
+ /*HOMEWORK3 - CSS*/
+
+/*
+Program name: patient-form.html
+Author: Hareem Ali
+Date created: 11/5
+Date last edited: 11/9
+Version: 2.0
+Description: this is the css code for a thank you page
+*/
+
+header {
+        width:100%;
+        background-color:burlywood;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: cornsilk;
+    margin: 0;
+    height: 100%;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+main {
+    text-align: center;
+    font-family:fantasy;
+    font-weight: normal;
+    
+}
+
+.image {
+    text-align: left;
+    background-image: none;
+}
+
+.td1 {
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+th {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    position: flex;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(161, 206, 206);
+
+}
+
+#footer {
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    margin-right: 10px;
+    
+}
+
+label {
+    text-align: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: normal;
+}
+
+input{
+    text-align: left;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* HW2 ADDITIONS */
+
+.error {
+        color: rgb(35, 87, 31);
+        font-size: 12px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: normal;
+}
+
+.password-message { 
+        text-align: right;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: normal;
+        position: relative;
+        left: 100px;
+        background: transparent;
+        padding: 10px;
+        border-spacing: 2px;
+        border-radius: 20px;
+        color: rgba(120, 16, 144, 0.442);
+}
+
+#review { 
+        margin-top: 5px;
+}
+
+table.output { 
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #e9f0d8;
+    border: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+}
+
+tr.outputdata {
+    background-color: rgba(255, 251, 239, 0.742);
+}
+
+td.outputdata {
+        width: 500px;
+        background-color: rgba(255, 251, 239, 0.742);
+        padding: 10px;
+        border-spacing: 2px;
+        border-radius: 20px;
+        color: black;
+}
+
+/*homework 3 additions *?
+
+/*alert box styling */
+#alert-box{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color:  rgba(180, 226, 215, 0.442);
+}
+
+#alert-content { 
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    height: 135px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 25px;
+    text-align: center;
+}
+
+#alert-content h4 {
+    margin-top: 20%;
+    font-size: 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+}
+
+#close-alert { 
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    color: rgba(21, 76, 63, 0.442);
+    border-color: rgba(180, 226, 215, 0.442);
+    font-size: 15px;
+    font-weight: bold;
+    height: 20px;
+    width: 80px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+}
