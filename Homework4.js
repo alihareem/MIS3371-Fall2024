@@ -1,10 +1,10 @@
- /*HOMEWORK 3 - JAVASCRIPT*/
+ /*HOMEWORK 4 - JAVASCRIPT*/
 
 /*
 Program name: patient-form.html
 Author: Hareem Ali
 Date created: 11/5
-Date last edited: 11/9
+Date last edited: 12/3
 Version: 3.0
 Description: this is the javascript code for a patient registration form
 */
