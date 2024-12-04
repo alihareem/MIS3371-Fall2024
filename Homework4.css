@@ -10,8 +10,17 @@ Description: this is the css code for a thank you page
 */
 
 header {
+        position: sticky;
+        top: 0;
+        transition: background-color 0.4 easy-in-out;
         width:100%;
-        background-color:burlywood;
+        background-color: burlywood;
+        z-index: 1000;
+}
+
+header.scrolled {
+ background-color: burlywood;
+ opacity: 1.0;
 }
 
 body{
