@@ -524,7 +524,7 @@ inputs.forEach(function(input) {
 
  // set a cookie with the input value when the input field changes
  inputElement.addEventListener("input", function() {
-  setCookie(input.cookieName, inputElement.value, 30);
+  setCookie(input.cookieName, inputElement.value, 2);
  });
 
 });
