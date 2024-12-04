@@ -513,13 +513,13 @@ var inputs = [
  {id: "username", cookieName: "username"},
 ]
 
-inputs.forEach(function(input)) {
+inputs.forEach(function(input) {
  var inputElement = document.getElementById(input.id);
 
  //prefill input fields with value from the cookie//
  var cookieValue = getCookie(input.cookieName);
  if (cookieValue !=="") {
-  inputElement.Value = cookieValue;
+  inputElement.value = cookieValue;
  }
 
  // set a cookie with the input value when the input field changes//
@@ -532,13 +532,13 @@ inputs.forEach(function(input)) {
 //greet the user with their name if the cookie is set//
 var firstName = getCookie("firstName");
 if (firstName !== "") {
- document.getElementById("welcome1").innnerHTML = "Welcome back, " + firstName + "!" </br><br>";
- document.getElementById("welcome2").innnerHTML = 
+ document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!" </br><br>";
+ document.getElementById("welcome2").innerHTML = 
 "<a href = '#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";
 
  document.getElementById("new-user").addEventListener("click", function() {
   inputs.forEach(function(input) {
-   setCookie(input.CookieName, "", -1);
+   setCookie(input.cookieName, "", -1);
   });
    location.reload();
  });
