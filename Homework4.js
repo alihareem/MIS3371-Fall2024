@@ -496,7 +496,7 @@ function getCookie (name) {
    return cookie.substring(cookieName.length, cookie.length);
   }
  }
-  return " ";
+  return "";
 }
 
 var inputs = [
@@ -516,23 +516,23 @@ var inputs = [
 inputs.forEach(function(input) {
  var inputElement = document.getElementById(input.id);
 
- //prefill input fields with value from the cookie//
+ //prefill input fields with value from the cookie
  var cookieValue = getCookie(input.cookieName);
  if (cookieValue !=="") {
   inputElement.value = cookieValue;
  }
 
- // set a cookie with the input value when the input field changes//
- inputElement.addEventListener("input", function(){
+ // set a cookie with the input value when the input field changes
+ inputElement.addEventListener("input", function() {
   setCookie(input.cookieName, inputElement.value, 30);
  });
 
 });
 
-//greet the user with their name if the cookie is set//
+//greet the user with their name if the cookie is set
 var firstName = getCookie("firstName");
 if (firstName !== "") {
- document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!" </br><br>";
+ document.getElementById("welcome1").innerHTML = "Welcome back, " + firstName + "!<br/><br/>";
  document.getElementById("welcome2").innerHTML = 
 "<a href = '#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";
 
