@@ -202,7 +202,7 @@ td.outputdata {
 
 .iframe-container iframe{
  width: 95%;
- height: 20%;
+ height: 30%;
  border: 1px solid black;
 }
 
@@ -219,7 +219,7 @@ td.outputdata {
  text-align: center;
  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  font-weight: normal;
- margin-top: 20px;
+ margin-top: 10px;
 }
 
 
