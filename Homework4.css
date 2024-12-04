@@ -195,7 +195,7 @@ td.outputdata {
  top: 25%;
  right: 15px;
  width: 25%;
- height: 100%;
+ height: 90%;
  overflow: hidden;
  box-sizing: border-box;
 }
@@ -204,7 +204,6 @@ td.outputdata {
  width: 95%;
  height: 20%;
  border: 1px solid black;
- background-color: rgb(161, 206, 206)
 }
 
 #welcome1 {
