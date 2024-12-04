@@ -474,6 +474,7 @@ function validateEverything() {
         }
 }
 
+// HW4 UPDATES //
 //cookie for remembering info input on form//
 function setCookie (name, cvalue, expiryDays) {
   var day = new Date();
@@ -483,7 +484,7 @@ function setCookie (name, cvalue, expiryDays) {
 }
 
 function getCookie (name) {
- var cookieNmae = name + "=";
+ var cookieName = name + "=";
  var cookies = document.cookie.split(';');
 
  for (var i=0; i < cookies.length; i++) {
@@ -501,7 +502,7 @@ function getCookie (name) {
 var inputs = [
  {id: "fname", cookieName: "firstName"},
  {id: "middleinitial", cookieName: "middleInitial"},
- {id: "lname", cookieName: "lasttName"},
+ {id: "lname", cookieName: "lastName"},
  {id: "dateofbirth", cookieName: "dateofbirth"},
  {id: "ssn", cookieName: "ssn"},
  {id: "address1", cookieName: "address1"},
@@ -517,7 +518,7 @@ inputs.forEach(function(input)) {
 
  //prefill input fields with value from the cookie//
  var cookieValue = getCookie(input.cookieName);
- if (cookieValue !==" "{
+ if (cookieValue !=="") {
   inputElement.Value = cookieValue;
  }
 
@@ -528,19 +529,19 @@ inputs.forEach(function(input)) {
 
 });
 
-//greet the user with their name + message if the cookie is set//
+//greet the user with their name if the cookie is set//
 var firstName = getCookie("firstName");
-if (firstName !== " ") {
- document.getElementById("welcome1").innnerHTML = "Welcome back, " + firstName + "!" </br>";
+if (firstName !== "") {
+ document.getElementById("welcome1").innnerHTML = "Welcome back, " + firstName + "!" </br><br>";
  document.getElementById("welcome2").innnerHTML = 
-"<a href = '#' id='new-user' >Not " + firstName + "? Click here to start a new form. </a>";
+"<a href = '#' id='new-user'>Not " + firstName + "? Click here to start a new form.</a>";
 
- document.getElementById("new-user").addEventListener = ("click", function() {
+ document.getElementById("new-user").addEventListener("click", function() {
   inputs.forEach(function(input) {
    setCookie(input.CookieName, "", -1);
-  })
+  });
    location.reload();
- })
+ });
 
 }
 
