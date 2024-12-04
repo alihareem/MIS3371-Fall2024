@@ -500,6 +500,54 @@ function getCookie {
 
 var inputs = [
  {id: "fname", cookieName: "firstName"},
+ {id: "middleinitial", cookieName: "middleInitial"},
+ {id: "lname", cookieName: "lasttName"},
+ {id: "dateofbirth", cookieName: "dateofbirth"},
+ {id: "ssn", cookieName: "ssn"},
+ {id: "address1", cookieName: "address1"},
+ {id: "city", cookieName: "city"},
+ {id: "zipcode", cookieName: "zipcode"},
+ {id: "email", cookieName: "email"},
+ {id: "phone", cookieName: "phone"},
+ {id: "username", cookieName: "username"},
+]
+
+inputs.forEach(function(input)) {
+ var inputElement = document.getElementById(input.id);
+
+ //prefill input fields with value from the cookie//
+ var cookieValue = getCookie(input.cookieName);
+ if (cookieValue !==" "{
+  inputElement.Value = cookieValue;
+ }
+
+ // set a cookie with the input value when the input field changes//
+ inputElement.addEventListener("input", function(){
+  setCookie(input.cookieName, inputElement.value, 30);
+ });
+
+});
+
+//greet the user with their name + message if the cookie is set//
+var firstName = getCookie("firstName");
+if (firstName !== " ") {
+ document.getElementById("welcome1").innnerHTML = "Welcome back, " + firstName + "!" </br>";
+ document.getElementById("welcome2").innnerHTML = 
+"<a href = '#' id='new-user' >Not " + firstName + "? Click here to start a new form. </a>";
+
+ document.getElementById("new-user").addEventListener = ("click", function() {
+  inputs.forEach(function(input) {
+   setCookie(input.CookieName, "", -1);
+  })
+   location.reload();
+ })
+
+}
+
+
+
+
+
 
 
 
