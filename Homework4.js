@@ -513,18 +513,43 @@ var inputs = [
  {id: "username", cookieName: "username"},
 ]
 
+const rememberMeCheckbox = document.getElementById("rememberMe");
+rememberMeCheckbox.addEventListener("change", function () {
+    if (!rememberMeCheckbox.checked) {
+        //If unchecked, delete cookies or local data
+        inputs.forEach(function (input) {
+            setCookie(input.cookieName, "", -1); // Expire the cookie immediately
+        });
+        console.log("Cookies and local data cleared because 'Remember Me' is unchecked.");
+    } else {
+        //If checked, save the data
+        inputs.forEach(function (input) {
+            const inputElement = document.getElementById(input.id);
+            if (inputElement && inputElement.value) {
+                setCookie(input.cookieName, inputElement.value, 2); // Save cookie for 2 days
+            }
+        });
+        console.log("Data saved because 'Remember Me' is checked.");
+    }
+});
+
+
 inputs.forEach(function(input) {
  var inputElement = document.getElementById(input.id);
 
  //prefill input fields with value from the cookie
  var cookieValue = getCookie(input.cookieName);
- if (cookieValue !=="") {
+ if (cookieValue !=="" && rememberMeCheckbox.checked) {
   inputElement.value = cookieValue;
  }
 
  // set a cookie with the input value when the input field changes
  inputElement.addEventListener("input", function() {
+  if (rememberMeCheckbox.checked) {
   setCookie(input.cookieName, inputElement.value, 2);
+    } else {
+            setCookie(input.cookieName, "", -1);
+  }
  });
 
 });
