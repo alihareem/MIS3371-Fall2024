@@ -473,3 +473,34 @@ function validateEverything() {
                 return false;
         }
 }
+
+//cookie for remembering info input on form//
+function setCookie (name, cvalue, expiryDays) {
+  var day = new Date();
+  day.setTime(day.getTime() + (expiryDays*24*60*60*1000));
+  var expires = "expires=" + day.toUTCString();
+  document.cookie = name + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie {
+ var cookieNmae = name + "=";
+ var cookies = document.cookie.split(';');
+
+ for (var i=0; i < cookies.length; i++) {
+  var cookie = cookies[i].trim();
+  while (cookue.charAt (0) == ' '{
+   cookie = cookie.substring(1);
+  }
+  if (cookie.indexOf(cookieName) == 0{
+   return cookie.substring(cookieName.length, cookie.length);
+  }
+ }
+  return " ";
+}
+
+var inputs = [
+ {id: "fname", cookieName: "firstName"},
+
+
+
+
