@@ -12,15 +12,15 @@ Description: this is the css code for a thank you page
 header {
         position: sticky;
         top: 0;
-        transition: background-color 0.4 easy-in-out;
+        transition: background-color 0.4s ease-in-out;
         width:100%;
         background-color: burlywood;
         z-index: 1000;
 }
 
 header.scrolled {
- background-color: burlywood;
- opacity: 1.0;
+ background-color: rgba(0,0,0,0.8);
+ opacity: 0.9;
 }
 
 body{
@@ -63,7 +63,7 @@ th {
 }
 
 footer {
-    position: flex;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: rgb(161, 206, 206);
