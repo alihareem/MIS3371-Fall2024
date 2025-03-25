@@ -1,0 +1,61 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Something Went Wrong</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff5733;
+        }
+        p {
+            color: #333;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="error-title">Oops! Something Went Wrong</h1>
+        <p id="error-message">An unexpected error occurred.</p>
+        <a href="/">Go back to Homepage</a>
+    </div>
+
+    <script>
+        // AWS S3 does not pass error codes directly in the URL.
+        // Instead, we can infer the error type based on the referrer or guessing the most likely case.
+
+        // Get the document referrer (if available)
+        const referrer = document.referrer;
+
+        // Detect 403 or 404 based on known patterns
+        if (!referrer || referrer.includes("s3.amazonaws.com")) {
+            document.getElementById("error-title").textContent = "403 - Forbidden";
+            document.getElementById("error-message").textContent = "You don’t have permission to access this page.";
+        } else {
+            document.getElementById("error-title").textContent = "404 - Page Not Found";
+            document.getElementById("error-message").textContent = "The page you are looking for might have been removed or is temporarily unavailable.";
+        }
+    </script>
+</body>
+</html>
